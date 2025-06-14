@@ -10,6 +10,8 @@
   <body>
     <header class="todo-header">
       <h1 class="todo-title">Todo List</h1>
+    </header>
+    <main>
       <nav class="todo-nav">
         <div class="menu-list">
           <span class="material-symbols-outlined">
@@ -18,41 +20,58 @@
         </div>
         <ul class="todo-nav-list">
           <li>Todas las tareas</li>
-          <li>hoy</li>
+          <li>Hoy</li>
           <li>Importantes</li>
           <li>Completadas</li>
-          <li>dark mode</li>
-          <li>añadir tarea</li>
+          <li>Dark mode</li>
+          <li>Añadir tarea</li>
         </ul>
       </nav>
-    </header>
-    <main>
-      <div class="nav-functions">
-          
-          <button class="search"><span class="material-symbols-outlined">
-            search
-            </span></button>
-          <input type="text" class="search-todo-list"/></li>
-          <a>link</a>
-          <a>git</a>
-        
-      </div>
-      <section class="todo-container">
-        <h2>Tareas</h2>
-        <ul class="todo-details">
-          <li>
-            <p>Total:<span>0</span></p>
-          </li>
-          <li>
-            <button>Filtro</button>
-            <button>Eliminar</button>
-          </li>
-        </ul>
-        <div class="todo-add">
-          <button>añadir tarea</button>
+      <div class="content-todo-list">
+        <div class="nav-functions">
+            <button class="search"><span class="material-symbols-outlined">
+              search
+              </span></button>
+            <input type="text" class="search-todo-list"/></li>
+            <a href="https://www.linkedin.com/in/miguel-angel-jimenez-fajardo/" target="_blank"> <img src="resource/linkedin-logo.webp" alt="Linkedin">
+            </a>
+            <a href="https://github.com/FARNIKS" target="_blank"><img src="resource/github-logo.png" alt="GitHUb">
+            </a>
         </div>
-      </section>
-      
+        <section class="todo-container">
+          <h2>Tareas</h2>
+          <ul class="todo-details">
+            <li>
+              <p>Total:<span>0</span></p>
+            </li>
+            <li>
+              <button>Filtro</button>
+              <button>Eliminar</button>
+            </li>
+          </ul>
+          <div class="todo-add">
+            <label for="title-todo" >Titulo tarea</label>
+            <input type="text" id="title-todo" placeholder="Tarea 1">
+            <label for="description-todo" >Descripción</label>
+            <input type="text" id="description-todo" placeholder="Descripción">
+            <label for="fecha">Selecciona una fecha limite:</label>
+            <input type="date" id="fecha" name="fecha">
+            <label for="difficulty" >Nivel de dificultad</label>
+            <select name="seleccionar" id="difficulty">
+              <option value="1">Facil</option>
+              <option value="2">Medio</option>
+              <option value="3">Dificil</option>
+            </select>
+            <label for="subtarea">Subtareas</label>
+              <label>
+                <input type="checkbox" id="tarea1">
+                <input type="text" id="subtarea" placeholder="Escribe una subtarea">
+                <button>+</button>
+              </label>
+            <button>añadir tarea</button>
+          </div>
+        </section>
+    </div>
     </main>
     <footer></footer>
   </body>
