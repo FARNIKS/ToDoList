@@ -27,6 +27,26 @@
           <li>Añadir tarea</li>
         </ul>
       </nav>
+
+
+      <!--
+      <main>
+        <nav class="todo-nav-min">
+          <div class="menu-list">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+          </div>
+          <ul class="todo-nav-list">
+            <li>T</li>
+            <li>H</li>
+            <li>I</li>
+            <li>C</li>
+            <li>D</li>
+            <li>A</li>
+          </ul>
+        </nav>-->
+
       <div class="content-todo-list">
         <div class="nav-functions">
             <button class="search"><span class="material-symbols-outlined">
@@ -50,24 +70,39 @@
             </li>
           </ul>
           <div class="todo-add">
-            <label for="title-todo" >Titulo tarea</label>
-            <input type="text" id="title-todo" placeholder="Tarea 1">
-            <label for="description-todo" >Descripción</label>
-            <input type="text" id="description-todo" placeholder="Descripción">
-            <label for="fecha">Selecciona una fecha limite:</label>
-            <input type="date" id="fecha" name="fecha">
-            <label for="difficulty" >Nivel de dificultad</label>
-            <select name="seleccionar" id="difficulty">
-              <option value="1">Facil</option>
-              <option value="2">Medio</option>
-              <option value="3">Dificil</option>
-            </select>
+            <div>
+              <label for="title-todo">Título tarea</label>
+              <input type="text" id="title-todo" class="input-content" placeholder="Tarea 1">
+          </div>
+      
+          <div>
+              <label for="description-todo">Descripción</label>
+              <input type="text" id="description-todo" class="input-content" placeholder="Descripción">
+          </div>
+      
+          <div>
+              <label for="fecha">Elige fecha límite:</label>
+              <input type="date" id="fecha" name="fecha" class="input-content">
+          </div>
+      
+          <div class="content-dificulty">
+              <label for="difficulty">Nivel de dificultad</label>
+              <select name="seleccionar" id="difficulty">
+                  <option value="1">Fácil</option>
+                  <option value="2">Medio</option>
+                  <option value="3">Difícil</option>
+              </select>
+          </div>
+      
+      
+
             <label for="subtarea">Subtareas</label>
-              <label>
+              <div class="subtareas">
                 <input type="checkbox" id="tarea1">
-                <input type="text" id="subtarea" placeholder="Escribe una subtarea">
+                <input type="text" id="subtarea" class="input-task"  placeholder="Escribe una subtarea">
                 <button>+</button>
-              </label>
+              </div>
+
             <button>añadir tarea</button>
           </div>
         </section>

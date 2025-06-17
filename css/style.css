@@ -20,11 +20,13 @@ img{
     width: 40px;
 }
 
+
 .todo-header{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     color: #000;
+    padding: 10px;
 }
 
 .todo-nav{
@@ -33,7 +35,14 @@ img{
     padding: 10px;
     height: 100vh; 
     border-radius: 0px 30px 0px 0px;
+    min-width: 150px;
 }
+.todo-nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .todo-nav-list li:hover{
     background-color: aliceblue;
     color: #000;
@@ -85,6 +94,27 @@ img{
     padding: 10px;
     background: #a8d0e7;
     border-radius: 10px;
-    
+    gap: 5px;
+    max-width: 260px;
+}
+.subtareas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+.input-task{
+    width: 100%;
+    max-width: 200px;
+}
+
+.content-dificulty{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-content{
+    width: 100%;
 }
 
