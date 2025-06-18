@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
     <link rel="stylesheet" href="css/style.css" />
     <title>Todo List</title>
   </head>
@@ -12,40 +13,86 @@
       <h1 class="todo-title">Todo List</h1>
     </header>
     <main>
-      <nav class="todo-nav">
+      <nav id="nav-bar" class="todo-nav" >
         <div class="menu-list">
-          <span class="material-symbols-outlined">
-              menu
+          <span class="material-symbols-outlined" id="hamburguer">
+              <span>menu</span> 
           </span>
         </div>
-        <ul class="todo-nav-list">
-          <li>Todas las tareas</li>
-          <li>Hoy</li>
-          <li>Importantes</li>
-          <li>Completadas</li>
-          <li>Dark mode</li>
-          <li>Añadir tarea</li>
+        <ul id="nav-links" class="todo-nav-list nav-links">
+          <li> 
+            <span class="material-symbols-outlined">
+              stacks
+            </span>
+            <p>Todas las tareas</p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              today
+            </span>
+            <p>Hoy</p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              star
+            </span>
+            <p>Importantes</p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              check_box
+            </span>
+            <p>Completadas</p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              toggle_off
+            </span>
+            <p>Dark mode</p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              library_add
+            </span>
+            <p>Añadir tarea</p>
+          </li>
+        </ul>
+      
+
+        <ul class="todo-nav-list nav-links-mobile"  id="nav-links-mobile">
+          <li> 
+            <span class="material-symbols-outlined">
+              stacks
+            </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              today
+            </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              star
+            </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              check_box
+            </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              toggle_off
+            </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              library_add
+            </span>
+          </li>
         </ul>
       </nav>
 
-
-      <!--
-      <main>
-        <nav class="todo-nav-min">
-          <div class="menu-list">
-            <span class="material-symbols-outlined">
-                menu
-            </span>
-          </div>
-          <ul class="todo-nav-list">
-            <li>T</li>
-            <li>H</li>
-            <li>I</li>
-            <li>C</li>
-            <li>D</li>
-            <li>A</li>
-          </ul>
-        </nav>-->
 
       <div class="content-todo-list">
         <div class="nav-functions">
@@ -65,49 +112,52 @@
               <p>Total:<span>0</span></p>
             </li>
             <li>
-              <button>Filtro</button>
-              <button>Eliminar</button>
+              <button class="buttons buttons-todo-details">Filtro</button>
+              <button class="buttons buttons-todo-details">Eliminar</button>
             </li>
           </ul>
-          <div class="todo-add">
+          <form>
+            <div class="todo-add">
+              <div>
+                <label for="title-todo">Título tarea</label>
+                <input type="text" id="title-todo" class="input-content" placeholder="Tarea 1">
+            </div>
+        
             <div>
-              <label for="title-todo">Título tarea</label>
-              <input type="text" id="title-todo" class="input-content" placeholder="Tarea 1">
-          </div>
-      
-          <div>
-              <label for="description-todo">Descripción</label>
-              <input type="text" id="description-todo" class="input-content" placeholder="Descripción">
-          </div>
-      
-          <div>
-              <label for="fecha">Elige fecha límite:</label>
-              <input type="date" id="fecha" name="fecha" class="input-content">
-          </div>
-      
-          <div class="content-dificulty">
-              <label for="difficulty">Nivel de dificultad</label>
-              <select name="seleccionar" id="difficulty">
-                  <option value="1">Fácil</option>
-                  <option value="2">Medio</option>
-                  <option value="3">Difícil</option>
-              </select>
-          </div>
-      
-      
+                <label for="description-todo">Descripción</label>
+                <textarea name="description" id="description-todo" class="input-content text-content" placeholder="Descripción"></textarea>
+            </div>
+        
+            <div>
+                <label for="fecha">Elige fecha límite:</label>
+                <input type="date" id="fecha" name="fecha" class="input-content">
+            </div>
+        
+            <div class="content-dificulty">
+                <label for="difficulty">Nivel de dificultad</label>
+                <select name="seleccionar" id="difficulty" class="input-content">
+                    <option value="1">Fácil</option>
+                    <option value="2">Medio</option>
+                    <option value="3">Difícil</option>
+                </select>
+            </div>
 
-            <label for="subtarea">Subtareas</label>
-              <div class="subtareas">
-                <input type="checkbox" id="tarea1">
-                <input type="text" id="subtarea" class="input-task"  placeholder="Escribe una subtarea">
-                <button>+</button>
-              </div>
+              <label for="subtarea">Subtareas</label>
+                <div class="subtareas">
+                  <input type="checkbox" id="tarea1">
+                  <input type="text" id="subtarea" class="input-content"  placeholder="Escribe una subtarea">
+                  <button class="button-add-secondary-task">
+                    +
+                  </button>
+                </div>
 
-            <button>añadir tarea</button>
-          </div>
+              <button class="buttons">Añadir tarea</button>
+            </div>
+          </form>
         </section>
     </div>
     </main>
     <footer></footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
