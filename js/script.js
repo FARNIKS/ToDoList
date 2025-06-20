@@ -22,32 +22,35 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault(); // Evita recargar la página
 
-    // Capturamos cada valor en su respectiva variable
     const titulo = document.getElementById("title-todo").value;
     const descripcion = document.getElementById("description-todo").value;
-    const fechaLimite = document.getElementById("fecha").value;
-    const importancia = document.getElementById("importance").value;
-    const dificultad = document.getElementById("difficulty").value;
+    const inputFecha = document.getElementById("fecha").value;
+    const importanciaSelect = document.getElementById("importance");
+    const dificultadSelect = document.getElementById("difficulty");
+
+    const importanciaTexto =
+      importanciaSelect.options[importanciaSelect.selectedIndex].text;
+    const dificultadTexto =
+      dificultadSelect.options[dificultadSelect.selectedIndex].text;
+
+    const hoy = new Date();
+    const año = hoy.getFullYear();
+    const mes = String(hoy.getMonth() + 1).padStart(2, "0");
+    const dia = String(hoy.getDate()).padStart(2, "0");
+
+    const fechaMinima = `${año}-${mes}-${dia}`;
+
+    inputFecha.min = fechaMinima;
+
     let errors = "";
 
-    if (titulo === "") {
-      errors += "Debes ingresar in titulo\n";
+    if (inputFecha !== "" && inputFecha < fechaMinima) {
+      errors += "La fecha no puede ser inferior a la actual\n";
     }
 
-    if (descripcion.length > 100) {
-      errors += "La descripcion es mayor a 100 caracteres\n";
-    }
-
-    if (errors !== "") {
-      alert(errors);
-      return;
-    }
-
-    // Aquí ya tienes todo validado
-    console.log(errors);
     console.log("Título:", titulo);
     console.log("Descripción:", descripcion);
-    console.log("Fecha límite:", fechaFormateada);
-    console.log("Importancia:", importancia);
-    console.log("Dificultad:", dificultad);
+    console.log("Fecha límite:", inputFecha);
+    console.log("Importancia:", importanciaTexto);
+    console.log("Dificultad:", dificultadTexto);
   });
