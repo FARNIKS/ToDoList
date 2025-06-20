@@ -116,44 +116,43 @@
               <button class="buttons buttons-todo-details">Eliminar</button>
             </li>
           </ul>
-          <form>
+          <form id="task-form">
             <div class="todo-add">
               <div>
-                <label for="title-todo">Título tarea</label>
+                <label for="title-todo" required>Título tarea</label>
                 <input type="text" id="title-todo" class="input-content" placeholder="Tarea 1">
             </div>
         
             <div>
                 <label for="description-todo">Descripción</label>
-                <textarea name="description" id="description-todo" class="input-content text-content" placeholder="Descripción"></textarea>
+                <textarea name="description" id="description-todo" class="input-content text-content" placeholder="Descripción(Opcional)"></textarea>
             </div>
         
             <div>
-                <label for="fecha">Elige fecha límite:</label>
+                <label for="fecha" required>Elige fecha límite:</label>
                 <input type="date" id="fecha" name="fecha" class="input-content">
+            </div>
+
+            <div class="content-importance">
+              <label for="importance">Nivel de Importancia</label>
+              <select name="seleccionar-level-importance" id="importance" class="input-content">
+                  <option value="1">Bajo</option>
+                  <option value="2">Alto</option>
+              </select>
             </div>
         
             <div class="content-dificulty">
                 <label for="difficulty">Nivel de dificultad</label>
-                <select name="seleccionar" id="difficulty" class="input-content">
+                <select name="seleccionar-level-dificulty" id="difficulty" class="input-content">
                     <option value="1">Fácil</option>
                     <option value="2">Medio</option>
                     <option value="3">Difícil</option>
                 </select>
             </div>
-
-              <label for="subtarea">Subtareas</label>
-                <div class="subtareas">
-                  <input type="checkbox" id="tarea1">
-                  <input type="text" id="subtarea" class="input-content"  placeholder="Escribe una subtarea">
-                  <button class="button-add-secondary-task">
-                    +
-                  </button>
-                </div>
-
               <button class="buttons">Añadir tarea</button>
             </div>
           </form>
+          <div id="task-list"></div>
         </section>
     </div>
     </main>
