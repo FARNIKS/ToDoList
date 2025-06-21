@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
     <title>Todo List</title>
   </head>
@@ -13,97 +16,76 @@
       <h1 class="todo-title">Todo List</h1>
     </header>
     <main>
-      <nav id="nav-bar" class="todo-nav" >
+      <nav id="nav-bar" class="todo-nav">
         <div class="menu-list">
           <span class="material-symbols-outlined" id="hamburguer">
-              <span>menu</span> 
+            <span>menu</span>
           </span>
         </div>
         <ul id="nav-links" class="todo-nav-list nav-links">
-          <li> 
-            <span class="material-symbols-outlined">
-              stacks
-            </span>
+          <li>
+            <span class="material-symbols-outlined"> stacks </span>
             <p>Todas las tareas</p>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              today
-            </span>
+            <span class="material-symbols-outlined"> today </span>
             <p>Hoy</p>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              star
-            </span>
+            <span class="material-symbols-outlined"> star </span>
             <p>Importantes</p>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              check_box
-            </span>
+            <span class="material-symbols-outlined"> check_box </span>
             <p>Completadas</p>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              toggle_off
-            </span>
+            <span class="material-symbols-outlined"> toggle_off </span>
             <p>Dark mode</p>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              library_add
-            </span>
+            <span class="material-symbols-outlined"> library_add </span>
             <p>Añadir tarea</p>
           </li>
         </ul>
-      
 
-        <ul class="todo-nav-list nav-links-mobile"  id="nav-links-mobile">
-          <li> 
-            <span class="material-symbols-outlined">
-              stacks
-            </span>
+        <ul class="todo-nav-list nav-links-mobile" id="nav-links-mobile">
+          <li>
+            <span class="material-symbols-outlined"> stacks </span>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              today
-            </span>
+            <span class="material-symbols-outlined"> today </span>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              star
-            </span>
+            <span class="material-symbols-outlined"> star </span>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              check_box
-            </span>
+            <span class="material-symbols-outlined"> check_box </span>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              toggle_off
-            </span>
+            <span class="material-symbols-outlined"> toggle_off </span>
           </li>
           <li>
-            <span class="material-symbols-outlined">
-              library_add
-            </span>
+            <span class="material-symbols-outlined"> library_add </span>
           </li>
         </ul>
       </nav>
 
-
       <div class="content-todo-list">
         <div class="nav-functions">
-            <button class="search"><span class="material-symbols-outlined">
-              search
-              </span></button>
-            <input type="text" class="search-todo-list"/></li>
-            <a href="https://www.linkedin.com/in/miguel-angel-jimenez-fajardo/" target="_blank"> <img src="resource/linkedin-logo.webp" alt="Linkedin">
-            </a>
-            <a href="https://github.com/FARNIKS" target="_blank"><img src="resource/github-logo.png" alt="GitHUb">
-            </a>
+          <button class="search">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+          <input type="text" class="search-todo-list" />
+          <a
+            href="https://www.linkedin.com/in/miguel-angel-jimenez-fajardo/"
+            target="_blank"
+          >
+            <img src="resource/linkedin-logo.webp" alt="Linkedin" />
+          </a>
+          <a href="https://github.com/FARNIKS" target="_blank"
+            ><img src="resource/github-logo.png" alt="GitHUb" />
+          </a>
         </div>
         <section class="todo-container">
           <h2>Tareas</h2>
@@ -112,49 +94,78 @@
               <p>Total:<span>0</span></p>
             </li>
             <li>
-              <button class="buttons buttons-todo-details">Filtro</button>
               <button class="buttons buttons-todo-details">Eliminar</button>
             </li>
           </ul>
-          <form id="task-form">
-            <div class="todo-add">
-              <div>
-                <label for="title-todo" required>Título tarea</label>
-                <input type="text" id="title-todo" class="input-content" placeholder="Tarea 1" required>
-            </div>
-        
-            <div>
-                <label for="description-todo">Descripción</label>
-                <textarea name="description" id="description-todo"  class="input-content text-content" placeholder="Descripción(Opcional)" maxlength="100" rows="3" cols="30"></textarea>
-            </div>
-        
-            <div>
-                <label for="fecha" required>Elige fecha límite:</label>
-                <input type="date" id="fecha" name="fecha" class="input-content" >
-            </div>
+          <div class="task-list" id="task-list">
+            <form id="task-form">
+              <div class="todo-add">
+                <div>
+                  <label for="title-todo" required>Título tarea</label>
+                  <input
+                    name="titleTodo"
+                    type="text"
+                    id="title-todo"
+                    class="input-content"
+                    placeholder="Tarea 1"
+                    required
+                  />
+                </div>
 
-            <div class="content-importance">
-              <label for="importance">Nivel de Importancia</label>
-              <select name="seleccionar-level-importance" id="importance" class="input-content">
-                  <option value="1">Bajo</option>
-                  <option value="2">Alto</option>
-              </select>
-            </div>
-        
-            <div class="content-dificulty">
-                <label for="difficulty">Nivel de dificultad</label>
-                <select name="seleccionar-level-dificulty" id="difficulty" class="input-content">
-                    <option value="1">Fácil</option>
-                    <option value="2">Medio</option>
-                    <option value="3">Difícil</option>
-                </select>
-            </div>
-              <button class="buttons">Añadir tarea</button>
-            </div>
-          </form>
-          <div id="task-list"></div>
+                <div>
+                  <label for="description-todo">Descripción</label>
+                  <textarea
+                    name="descriptionTodo"
+                    id="description-todo"
+                    class="input-content text-content"
+                    placeholder="Descripción(Opcional)"
+                    maxlength="100"
+                    rows="3"
+                    cols="30"
+                  ></textarea>
+                </div>
+
+                <div>
+                  <label for="date" required>Elige fecha límite:</label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    min="2025-06-21"
+                    class="input-content"
+                  />
+                </div>
+
+                <div class="content-importance">
+                  <label for="importance">Nivel de Importancia</label>
+                  <select
+                    name="selectedLevelImportance"
+                    id="importance"
+                    class="input-content"
+                  >
+                    <option value="Bajo">Bajo</option>
+                    <option value="Alto">Alto</option>
+                  </select>
+                </div>
+
+                <div class="content-dificulty">
+                  <label for="difficulty">Nivel de dificultad</label>
+                  <select
+                    name="selectedLevelDificulty"
+                    id="difficulty"
+                    class="input-content"
+                  >
+                    <option value="Facil">Fácil</option>
+                    <option value="Medio">Medio</option>
+                    <option value="Difici">Difícil</option>
+                  </select>
+                </div>
+                <button class="buttons">Añadir tarea</button>
+              </div>
+            </form>
+          </div>
         </section>
-    </div>
+      </div>
     </main>
     <footer></footer>
     <script src="js/script.js"></script>
