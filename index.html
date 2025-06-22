@@ -23,26 +23,24 @@
           </span>
         </div>
         <ul id="nav-links" class="todo-nav-list nav-links">
-          <li>
-            <span class="material-symbols-outlined allTask"> stacks </span>
+          <li class="allTask">
+            <span class="material-symbols-outlined"> stacks </span>
             <p>Todas las tareas</p>
           </li>
-          <li>
-            <span class="material-symbols-outlined todayTask"> today </span>
+          <li class="todayTask">
+            <span class="material-symbols-outlined"> today </span>
             <p>Hoy</p>
           </li>
-          <li>
-            <span class="material-symbols-outlined importantTask"> star </span>
+          <li class="importantTask">
+            <span class="material-symbols-outlined"> star </span>
             <p>Importantes</p>
           </li>
-          <li>
-            <span class="material-symbols-outlined completeTask">
-              check_box
-            </span>
+          <li class="completeTask">
+            <span class="material-symbols-outlined"> check_box </span>
             <p>Completadas</p>
           </li>
-          <li>
-            <span class="material-symbols-outlined modeTask"> toggle_off </span>
+          <li class="modeTask">
+            <span class="material-symbols-outlined"> toggle_off </span>
             <p>Dark mode</p>
           </li>
         </ul>
@@ -74,7 +72,7 @@
             type="text"
             class="search-todo-list input-search"
             id="search-task"
-            placeholder="Buscar tarea por nombre..."
+            placeholder="Buscar tarea . . ."
           />
           <a
             href="https://www.linkedin.com/in/miguel-angel-jimenez-fajardo/"
@@ -97,76 +95,77 @@
                 class="buttons buttons-todo-details"
                 id="delete-completed-btn"
               >
-                Eliminar tareas completadas
+                Eliminar tareas
               </button>
             </li>
           </ul>
-          <div class="task-list" id="task-list">
-            <form id="task-form">
-              <div class="todo-add">
-                <div>
-                  <label for="title-todo" required>Título tarea</label>
-                  <input
-                    name="titleTodo"
-                    type="text"
-                    id="title-todo"
-                    class="input-content"
-                    placeholder="Tarea 1"
-                    required
-                  />
-                </div>
 
-                <div>
-                  <label for="description-todo">Descripción</label>
-                  <textarea
-                    name="descriptionTodo"
-                    id="description-todo"
-                    class="input-content text-content"
-                    placeholder="Descripción(Opcional)"
-                    maxlength="100"
-                    rows="3"
-                    cols="30"
-                  ></textarea>
-                </div>
-
-                <div>
-                  <label for="date" required>Elige fecha límite:</label>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    class="input-content"
-                  />
-                </div>
-
-                <div class="content-importance">
-                  <label for="importance">Nivel de Importancia</label>
-                  <select
-                    name="selectedLevelImportance"
-                    id="importance"
-                    class="input-content"
-                  >
-                    <option value="Bajo">Bajo</option>
-                    <option value="Alto">Alto</option>
-                  </select>
-                </div>
-
-                <div class="content-dificulty">
-                  <label for="difficulty">Nivel de dificultad</label>
-                  <select
-                    name="selectedLevelDificulty"
-                    id="difficulty"
-                    class="input-content"
-                  >
-                    <option value="Facil">Fácil</option>
-                    <option value="Medio">Medio</option>
-                    <option value="Difici">Difícil</option>
-                  </select>
-                </div>
-                <button class="buttons">Añadir tarea</button>
+          <div>
+          <form id="task-form">
+            <div class="todo-add">
+              <div>
+                <label for="title-todo" required>Título tarea</label>
+                <input
+                  name="titleTodo"
+                  type="text"
+                  id="title-todo"
+                  class="input-content"
+                  placeholder="Tarea 1"
+                  required
+                />
               </div>
-            </form>
-          </div>
+
+              <div>
+                <label for="description-todo">Descripción</label>
+                <textarea
+                  name="descriptionTodo"
+                  id="description-todo"
+                  class="input-content text-content"
+                  placeholder="Descripción(Opcional)"
+                  maxlength="100"
+                  rows="3"
+                  cols="30"
+                ></textarea>
+              </div>
+
+              <div>
+                <label for="date" required>Elige fecha límite:</label>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  class="input-content"
+                />
+              </div>
+
+              <div class="content-importance">
+                <label for="importance">Nivel de Importancia</label>
+                <select
+                  name="selectedLevelImportance"
+                  id="importance"
+                  class="input-content"
+                >
+                  <option value="Bajo">Bajo</option>
+                  <option value="Alto">Alto</option>
+                </select>
+              </div>
+
+              <div class="content-dificulty">
+                <label for="difficulty">Nivel de dificultad</label>
+                <select
+                  name="selectedLevelDificulty"
+                  id="difficulty"
+                  class="input-content"
+                >
+                  <option value="Facil">Fácil</option>
+                  <option value="Medio">Medio</option>
+                  <option value="Difici">Difícil</option>
+                </select>
+              </div>
+              <button class="buttons">Añadir tarea</button>
+            </div>
+          </form>
+          <div class="task-list" id="task-list"></div>
         </section>
       </div>
     </main>
