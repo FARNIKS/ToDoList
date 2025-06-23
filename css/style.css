@@ -166,3 +166,25 @@ body{
     background-color: #B02E0C;
     color: aliceblue;
 }
+
+.task-todo{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #a8d0e7;
+    border-radius: 15px;
+    gap: 10px;
+    width: 280px;
+}
+.check-list-todo{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.task-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
